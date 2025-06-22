@@ -81,8 +81,8 @@ const ResponsiveNavbar = () => {
 
               {/* Search Input - Desktop */}
               <div className={`flex py-2 px-3 xl:py-3 border border-[#f1f1f1] rounded-[5px] bg-gray-50 focus-within:bg-white focus-within:border-gray-300 transition-all duration-300 ease-in-out transform ${search
-                  ? 'opacity-100 scale-100 w-32 xl:w-40'
-                  : 'opacity-0 scale-95 w-0 overflow-hidden'
+                ? 'opacity-100 scale-100 w-32 xl:w-40'
+                : 'opacity-0 scale-95 w-0 overflow-hidden'
                 }`}>
                 <input
                   placeholder="Search here..."
@@ -104,8 +104,8 @@ const ResponsiveNavbar = () => {
           <div className="flex items-center gap-3 lg:hidden">
             {/* Mobile Search */}
             <div className={`flex py-2 px-3 border border-[#f1f1f1] rounded-[5px] bg-gray-50 transition-all duration-300 ease-in-out transform ${search
-                ? 'opacity-100 scale-100 w-24'
-                : 'opacity-0 scale-95 w-0 overflow-hidden'
+              ? 'opacity-100 scale-100 w-24'
+              : 'opacity-0 scale-95 w-0 overflow-hidden'
               }`}>
               <input
                 placeholder="Search..."
@@ -143,8 +143,8 @@ const ResponsiveNavbar = () => {
 
           {/* Mobile Menu */}
           <div className={`absolute top-[60px] right-0 w-full sm:w-[320px] bg-white border border-gray-200 rounded-lg shadow-xl lg:hidden z-50 transition-all duration-300 ease-in-out transform ${showMenu
-              ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
-              : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'
+            ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
+            : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'
             }`}>
             <ul className="flex flex-col py-6">
               {navItems.map((item, index) => (

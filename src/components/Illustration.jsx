@@ -1,8 +1,23 @@
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import img from "../assets/Lightbulb2.svg"
+import Slider from "react-slick";
+import icons_one from "../assets/icon_one.svg"
+import icons_two from "../assets/icons_two.svg"
+import icons_three from "../assets/icons_three.svg"
+import icons_four from "../assets/icons_four.svg"
 
 const Illustration = () => {
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000
+    };
     return (
-        <section className="pt-16 md:pt-20 lg:pt-[100px] px-4 md:px-6 lg:px-0">
+        <section className="pt-16 pb-16 md:pt-20 lg:pt-[100px] px-4 md:px-6 lg:px-0">
             <div className="container">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-light leading-tight md:leading-[50px] lg:leading-[70px] text-center pb-6 md:pb-8">
                     Our Illustrations
@@ -21,6 +36,32 @@ const Illustration = () => {
                         text={"2,966 hand-drawn illustrations created by a global community of 77 world-class artists"}
                     />
                 </div>
+                <div className="flex items-center justify-center mt-[35px] gap-[14px] bg-[#221D21] rounded-[8px] w-[250px] mx-auto px-4 py-3">
+                    <div>
+                        <img src="/number_1.svg" alt="icon" />
+                    </div>
+                    <div>
+                        <p className="text-white font-bold text-[9px]">PRODUCT HUNT</p>
+                        <p className="text-white font-bold text-[16px]">#1 Product of the Day</p>
+                    </div>
+                </div>
+                <p className="text-[16px] leading-[27px] text-center text-[#202020] py-[38px]">Loved by media publications, creative agencies and corporations alike.</p>
+
+                <Slider className="max-w-[1152px] mx-auto mt-[62px]" {...settings}>
+                    <div>
+                        <img src={icons_one} alt="icons" />
+                    </div>
+                    <div>
+                        <img src={icons_two} alt="icons" />
+                    </div>
+                    <div>
+                        <img src={icons_three} alt="icons" />
+                    </div>
+                    <div>
+                        <img src={icons_four} alt="icons" />
+                    </div>
+                </Slider>
+
             </div>
         </section>
     )
